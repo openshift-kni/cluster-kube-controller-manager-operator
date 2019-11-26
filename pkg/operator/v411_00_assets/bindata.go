@@ -111,7 +111,8 @@ kind: OpenShiftControllerManagerConfig
 kubeClientConfig:
   kubeConfig: /etc/kubernetes/static-pod-resources/configmaps/controller-manager-kubeconfig/kubeconfig
 servingInfo:
-  bindAddress: 0.0.0.0:10357
+  bindAddress: "[::]:10357"
+  bindNetwork: "tcp6"
   clientCA: /etc/kubernetes/static-pod-certs/configmaps/client-ca/ca-bundle.crt
   certFile: /etc/kubernetes/static-pod-resources/secrets/serving-cert/tls.crt
   keyFile: /etc/kubernetes/static-pod-resources/secrets/serving-cert/tls.key
